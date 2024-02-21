@@ -1,28 +1,40 @@
 import React, { FC, JSX } from "react";
+import Image from "next/image";
 
 const Introduction: FC = (): JSX.Element => {
   return (
-    <div className="min-h-screen flex">
-      <div className="flex-row justify-between flex w-full space-x-10">
-        <div className="text-wrap max-w-[50%] flex flex-col gap-5 pt-[10%]">
-          <h1 className="text-xs text-blue-200">Frontend Developer</h1>
-          <p>Hi, I am a frontend developer using React Framework</p>
-          <p>
-            1 year of experience in frontend development as part-time junior
-            developer.
-          </p>
-          <p>
+    <div className="custom-height flex px-10 bg-gradient-to-r from-violet-500 to-fuchsia-500 text-gray-100">
+      <div className="flex-row justify-between flex w-full">
+        <div className="text-wrap max-w-[50%] flex flex-col gap-5 pt-[13%]">
+          <h1 className="text-4xl font-bold">Gabriel John Paor</h1>
+          <p className="text-5xl font-bold">FRONT END</p>
+          <p className="text-5xl font-bold">DEVELOPER</p>
+          <div className="flex flex-row gap-3">
+            <button className="bg-green-500 w-32 py-2 rounded shadow-lg">
+              <a href="" className="custom-font-size font-semibold">
+                Contact me
+              </a>
+            </button>
+            <button className="bg-gray-600 w-32 py-2 rounded shadow-lg">
+              <a href="" className="custom-font-size font-semibold">
+                Projects
+              </a>
+            </button>
+          </div>
+          <p className="mt-5">
             My mission is to become a proficient and sought-after frontend
             developer, leveraging my skills in React Framework to create dynamic
             and user-friendly web applications while continuously learning and
             staying updated with the latest technologies and best practices.
           </p>
-          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full max-w-32">
-            Contact me
-          </button>
         </div>
-        <div className="justify-center flex items-center w-full bg-gray-400">
-          <p>image here</p>
+        <div className="justify-center flex items-end w-full rounded-full">
+          <Image
+            src={require("./../../public/images/profile-image.png")}
+            alt=""
+            width={600}
+            style={{ transform: "scaleX(-1)" }}
+          />
         </div>
       </div>
     </div>
